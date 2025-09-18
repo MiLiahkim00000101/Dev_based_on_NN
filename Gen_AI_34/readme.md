@@ -1,6 +1,6 @@
 # Gen_AI_34
 
-Solution presented in file "task.pyy"
+Solution presented in file "task.py"
 
 I used dataset available on link https://www.kaggle.com/datasets/jensenbaxter/10dataset-text-document-classification for solution
 
