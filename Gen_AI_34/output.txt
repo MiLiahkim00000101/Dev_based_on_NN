@@ -1,0 +1,44 @@
+
+Execution
+
+Vocabulary size: 29303 words
+Statistics: 
+
+Всего элементов в матрице: 29303000
+Ненулевых элементов: 206145
+Нулевых элементов: 29096855
+Разреженность (доля нулей): 99.30%
+Плотность (доля не нулей): 0.70%
+
+=== Analysis of vector for document 1 ===
+Vector shape: (1, 29303)
+Non-zero elements: 177
+Total elements: 29303
+
+First 20 non-zero elements with word names:
+  'face': 1
+  'as': 2
+  'they': 3
+  'for': 1
+  'the': 13
+  'of': 7
+  'which': 1
+  'that': 5
+  'to': 12
+  'in': 7
+  'new': 2
+  'companies': 1
+  'also': 1
+  'close': 1
+  'and': 9
+  'are': 4
+  'has': 3
+  'it': 3
+  'be': 1
+  'will': 1
+  ... and 157 more words
+
+Vector statistics:
+  Total words in document: 292
+  Unique words in document: 177
+  Most frequent word: 'the' (13 occurrences)
