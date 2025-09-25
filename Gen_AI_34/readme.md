@@ -8,14 +8,14 @@ I used dataset available on link https://www.kaggle.com/datasets/jensenbaxter/10
 - Method for transformation text to dictionary of words and vectors of words frequences for every document for using them in learning of Natural Language Process models
 
 ## Structure of dataset
-directory with data
-        |
-        |------ directory with documents
-        |------ directory with documents
-        |------ directory with documents
-        |------ directory with documents
-        |______ directory with documents
-        ...
+directory with data <br>
+        |<br>
+        |------ directory with documents<br>
+        |------ directory with documents<br>
+        |------ directory with documents<br>
+        |------ directory with documents<br>
+        |______ directory with documents<br>
+        ...<br>
 
 ## How to use
 - I used python@3.10.6
