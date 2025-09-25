@@ -3,26 +3,33 @@ from sklearn.feature_extraction.text import CountVectorizer
 import os
 import numpy as np
 import shutil
+import argparse
 
-def download_data():
+
+def download_data(type_of_path, dir_name):
     """
     Downloading of dataset from kaggle for solution(jensenbaxter/10dataset-text-document-classification)
     """
     # Download latest version
-    os.makedirs("./data", mode=0o777, exist_ok=False)
     path = kagglehub.dataset_download("jensenbaxter/10dataset-text-document-classification")
-    shutil.copytree(path, "data")
+    if type_of_path == 'r':
+        shutil.copytree(path, "./" + dir_name, dirs_exist_ok=True)
+    else:
+        shutil.copytree(path, dir_name, dirs_exist_ok=True)
+   
 
-
-def documents_to_list(texts : list):
+def documents_to_list(abs_rel_path : str, dir_name : str, texts : list):
     """
     Make the list of all documents from dataset
     """
-    dir_names = os.listdir("data/1")
+    if abs_rel_path == 'a':
+        dir_names = os.listdir(dir_name)
+    else:
+        dir_names = os.listdir(dir_name)
     for dir in dir_names:
-        filenames = os.listdir(os.path.abspath("data/1") + "/" + dir)
+        filenames = os.listdir(os.path.abspath(dir_name) + "/" + dir)
         for filename in filenames:
-            with open((os.path.abspath("data/1") + "/" + dir + "/" + filename), "r") as file:
+            with open((os.path.abspath(dir_name) + "/" + dir + "/" + filename), "r") as file:
                 texts.append(file.read())
 
 
@@ -94,17 +101,29 @@ def print_vector_example(X, vectorizer, feature_names, text_index=1):
           f"({max(non_zero_values)} occurrences)")
 
 def main():
-    # try:
-    #     download_data()
-    # except(FileExistsError):
-    #     print("You already have folder \'data\' in your working directory. Please delete it to load dataset again.\n\n" \
-    #     "If not, it's okay, programm will work correct with data you have previosly downloaded with given in readme link")
 
+
+    parser = argparse.ArgumentParser(description='Process directory to save data')
+    parser.add_argument('--abs_rel_path', type=str, nargs=1, default='r',
+                        help='using of absolute or relative path type \'a\' to use absolute and \'r\' to use relative,\n \'r\' is default')
+    parser.add_argument('data_dir_name', type=str, nargs=1,
+                        help='name of directory which will be using to save data')
+
+    args = parser.parse_args()
+
+    if args.abs_rel_path[0] != 'a' and args.abs_rel_path[0] != 'r':
+        print("Please enter correct type of path. Use --help to see options.")
+        return
+
+    
+
+    download_data(args.abs_rel_path[0], args.data_dir_name[0])
+    
     print("\n\nExecution\n")
 
     texts = list() # This is the list of all documents in string format
 
-    documents_to_list(texts)
+    documents_to_list(args.abs_rel_path[0], args.data_dir_name[0], texts)
 
     # Vectorize texts
     X, vectorizer, feature_names = text_vectorizing(texts)
