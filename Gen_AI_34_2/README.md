@@ -1,6 +1,6 @@
 # Gen_AI_34
 
-Solution presented in file "task.py"
+Solution presented in file "comparison_tfidf_countVec.py"
 
 I used dataset available on link https://www.kaggle.com/datasets/jensenbaxter/10dataset-text-document-classification for solution
 
