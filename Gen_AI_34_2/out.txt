@@ -1,0 +1,84 @@
+==============Черёд статистики CountVectorizer:==============
+Statistics: 
+
+Всего элементов в матрице: 29341000
+Ненулевых элементов: 211270
+Нулевых элементов: 29129730
+Разреженность (доля нулей): 99.28%
+Плотность (доля не нулей): 0.72%
+
+=== Analysis of vector for document 1 ===
+Vector shape: (1, 29341)
+Non-zero elements: 180
+Total elements: 29341
+
+First 20 non-zero elements with word names:
+  'the': 13
+  'to': 12
+  'and': 9
+  'spyware': 9
+  'of': 7
+  'in': 7
+  'a': 6
+  'that': 5
+  'is': 5
+  'computer': 5
+  'software': 5
+  'are': 4
+  'from': 4
+  'california': 4
+  'programs': 4
+  'they': 3
+  'has': 3
+  'it': 3
+  'on': 3
+  'with': 3
+  'by': 3
+  ... and 160 more words
+
+Vector statistics:
+  Unique words in document: 180
+  Most important word: 'the'
+
+
+==============Черёд статистики TF-IDF:==============
+Statistics: 
+
+Всего элементов в матрице: 29341000
+Ненулевых элементов: 211270
+Нулевых элементов: 29129730
+Разреженность (доля нулей): 99.28%
+Плотность (доля не нулей): 0.72%
+
+=== Analysis of vector for document 1 ===
+Vector shape: (1, 29341)
+Non-zero elements: 180
+Total elements: 29341
+
+First 20 non-zero elements with word names:
+  'spyware': 0.5423710409733503
+  'california': 0.19793524409670504
+  'computer': 0.19541134613900255
+  'software': 0.19462976210195215
+  'programs': 0.17312784541451304
+  'the': 0.14148053873980904
+  'fines': 0.13763945802507532
+  'to': 0.13046695740831898
+  'users': 0.11724680768340152
+  'collect': 0.11445612071111669
+  'pcs': 0.10367648273825403
+  'protect': 0.10072717269761583
+  'information': 0.09906401720347598
+  'and': 0.09843881946731295
+  'protection': 0.09813997153678865
+  'ability': 0.08801983670752656
+  'law': 0.08392268212374203
+  'personal': 0.07880405354842725
+  'of': 0.07710123885532293
+  'in': 0.07679349532427701
+  'schwarzenegger': 0.07613325766176762
+  ... and 160 more words
+
+Vector statistics:
+  Unique words in document: 180
+  Most important word: 'spyware'
