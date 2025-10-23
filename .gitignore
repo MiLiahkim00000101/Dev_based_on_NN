@@ -1,3 +1,9 @@
 .venv
 Gen_AI_34/data
 *.ipynb
+/Education_
+*data
+vectorizers-main
+*__pycache__*
+*archive*
+.vscode
