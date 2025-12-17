@@ -51,7 +51,8 @@ If you want to end chat type ```STOP```
 ## File status after example
 
 ### results_0.json
-```{
+```
+{
   "recommendation_1": {
     "name": "Генеративный ИИ: что это и как он работает",
     "author": "Александр Смирнов",
@@ -73,10 +74,12 @@ If you want to end chat type ```STOP```
     "justification": "Рассматривает этические и социальные аспекты развития генеративного ИИ, что важно для понимания его влияния на человека и общество.",
     "relevance": 75
   }
-}```
+}
+```
 
 ### results_1.json
-```{
+```
+{
   "recommendation_1": {
     "name": "История академгородка",
     "author": "Александр Панфилов",
@@ -98,8 +101,9 @@ If you want to end chat type ```STOP```
     "justification": "Представляет систематический взгляд на формирование научных центров в Сибири, включая Академгородок, и подходит для тех, кто интересуется образовательными проектами.",
     "relevance": 70
   }
-}```
+}
+```
 
-### results_2.json is regretfully empty but after several years maybe not :)
+### results_2.json is regretfully empty but things may changes through years :)
 
 
